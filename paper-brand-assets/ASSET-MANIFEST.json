@@ -1,0 +1,287 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 3538,
+    "sha256": "726a0af17a82f04d5065a5e3af6920749e81348dd9660fb8730a3501aa65e2c7"
+  },
+  {
+    "path": "app-icons/apple-touch-icon.png",
+    "bytes": 2636,
+    "sha256": "b45319419ec9958a2f39c94bef6f215730d1005af5c31d8211e83fb5bd2823c0"
+  },
+  {
+    "path": "app-icons/icon-192.png",
+    "bytes": 2733,
+    "sha256": "a0b046ce72bacd2972bdeb490335fb9754d1cfd8c4663a8251490c6ec67b9f05"
+  },
+  {
+    "path": "app-icons/icon-512.png",
+    "bytes": 7455,
+    "sha256": "8582d25b5e1b480a3a83bfb23098658a3259bb39f9b9373d6d6d40213925bf37"
+  },
+  {
+    "path": "app-icons/maskable-512.png",
+    "bytes": 7455,
+    "sha256": "8582d25b5e1b480a3a83bfb23098658a3259bb39f9b9373d6d6d40213925bf37"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-1024.png",
+    "bytes": 16643,
+    "sha256": "5f0d4cac33f2be1f6d42998efd81f546e695ecbc6c1b866b3d4895b368839685"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-128.png",
+    "bytes": 1954,
+    "sha256": "70dd831dae96470f9b81318c63b37f0f0ffb50f5ac77e00b42ffdbfc95f6dd39"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-192.png",
+    "bytes": 2718,
+    "sha256": "d239c5ceab9847f553fbb99f395050616b902478642ac1afec3724540d9edc94"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-256.png",
+    "bytes": 3646,
+    "sha256": "946f07f17c11cdd71af42ae76e67dd3907cf1e05e4d4b4a298a8de1553c3eb4c"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-512.png",
+    "bytes": 7412,
+    "sha256": "56232a8ea324d6a63449c3aca949ee30f1be7c0d205c149458a0f5b1196cb170"
+  },
+  {
+    "path": "app-icons/paper-app-icon-dark-64.png",
+    "bytes": 1165,
+    "sha256": "8d44e3920e0c4d185bbc7a5d704521c28d9471ec4e62b9cd59cb0723374c22cf"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-1024.png",
+    "bytes": 16650,
+    "sha256": "6235ee6eb23b391c2338d242a6faf44f88947f268948ad413aaf41346c2c069b"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-128.png",
+    "bytes": 1983,
+    "sha256": "00807ef9fca42e7d584c57227e6689001e83bc328449ba9d5e178d3c3421bd7d"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-180.png",
+    "bytes": 2636,
+    "sha256": "b45319419ec9958a2f39c94bef6f215730d1005af5c31d8211e83fb5bd2823c0"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-192.png",
+    "bytes": 2733,
+    "sha256": "a0b046ce72bacd2972bdeb490335fb9754d1cfd8c4663a8251490c6ec67b9f05"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-256.png",
+    "bytes": 3656,
+    "sha256": "2fd940683d36dc7f95e0634fce7f07044bcc8b4c14f865a2cbfc9276a16f70b4"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-512.png",
+    "bytes": 7455,
+    "sha256": "8582d25b5e1b480a3a83bfb23098658a3259bb39f9b9373d6d6d40213925bf37"
+  },
+  {
+    "path": "app-icons/paper-app-icon-light-64.png",
+    "bytes": 1177,
+    "sha256": "c86d4ed9ebc63f57fcfb209a5565a3afc747e8b21cb69528c463d4b0848e6b8c"
+  },
+  {
+    "path": "branding/brand-guidelines.md",
+    "bytes": 1446,
+    "sha256": "be20e0603a9a1d9be22c55c411b4520a4ea0640558215c7668310f3e4841673d"
+  },
+  {
+    "path": "branding/colors.json",
+    "bytes": 883,
+    "sha256": "66b1a9dc471cf4d4ffe70141265a7efef85f75316c6f556bbad2bcbf1242608b"
+  },
+  {
+    "path": "branding/typography.json",
+    "bytes": 416,
+    "sha256": "e5b8ac8dba3f4d0ae108e9ff9d44d00d96233b60c5f632836372f3a734ce7dfa"
+  },
+  {
+    "path": "examples/html-head-snippet.html",
+    "bytes": 823,
+    "sha256": "705804ee4e6c7bb1e7787ccf98e54f739614edf35f79403f805e2f32c95a1330"
+  },
+  {
+    "path": "examples/react-logo-example.tsx",
+    "bytes": 485,
+    "sha256": "738666cbcc84d550249dd950c0fd52668be07c9a2a35b6ab92a29f470e365dec"
+  },
+  {
+    "path": "favicons/android-chrome-192x192.png",
+    "bytes": 2733,
+    "sha256": "a0b046ce72bacd2972bdeb490335fb9754d1cfd8c4663a8251490c6ec67b9f05"
+  },
+  {
+    "path": "favicons/android-chrome-512x512.png",
+    "bytes": 7455,
+    "sha256": "8582d25b5e1b480a3a83bfb23098658a3259bb39f9b9373d6d6d40213925bf37"
+  },
+  {
+    "path": "favicons/apple-touch-icon.png",
+    "bytes": 2636,
+    "sha256": "b45319419ec9958a2f39c94bef6f215730d1005af5c31d8211e83fb5bd2823c0"
+  },
+  {
+    "path": "favicons/browserconfig.xml",
+    "bytes": 229,
+    "sha256": "f213c95b9854dbf82ca1514ad783ba820b1cda461a296ef3c30b99852d24651e"
+  },
+  {
+    "path": "favicons/favicon-128.png",
+    "bytes": 1972,
+    "sha256": "2408259fbd8baf1f90ca31f8f3a80dcb04b201f605d143c85c48d0581ddb24ea"
+  },
+  {
+    "path": "favicons/favicon-16.png",
+    "bytes": 470,
+    "sha256": "dcde4c5ba9f8e8f579e972395dcace832cdbe50a725743ebfe888010f88e554b"
+  },
+  {
+    "path": "favicons/favicon-32.png",
+    "bytes": 774,
+    "sha256": "86aa160567c90dd0547125c99d21f7203055c8f687412151ca9e1bd618b90513"
+  },
+  {
+    "path": "favicons/favicon-48.png",
+    "bytes": 1055,
+    "sha256": "d47de81f07ce188a4a2915299f03fdc8966675b21f40ba00ef21744f7373dfb3"
+  },
+  {
+    "path": "favicons/favicon-64.png",
+    "bytes": 1190,
+    "sha256": "c2cb2a68d87b1e382d966cdb279d23bfc7b722892f916b88caadc2f2773598b1"
+  },
+  {
+    "path": "favicons/favicon.ico",
+    "bytes": 474,
+    "sha256": "a491f28c9418d630249739ee085ed014f865f2f03755494ea93df0c064417dd1"
+  },
+  {
+    "path": "favicons/favicon.svg",
+    "bytes": 819,
+    "sha256": "6b93bab7b38f50640153dfc377ae9a5b0023fabab08f43b54c79521e901b40f0"
+  },
+  {
+    "path": "favicons/safari-pinned-tab.svg",
+    "bytes": 265,
+    "sha256": "e91fa0a139ecbb89fe4332bc4cadf432a98ed5aadf6f0c2fbc3903f5831cdd7d"
+  },
+  {
+    "path": "favicons/site.webmanifest",
+    "bytes": 662,
+    "sha256": "ca9cc5a90f5ec0cd6adcc6424f5aee2500d11c7e75719c1a0d24b0997fea2412"
+  },
+  {
+    "path": "icons/paper-icon.svg",
+    "bytes": 828,
+    "sha256": "b1bbdae82f2618e4206369e7817dec2631df9ec10bc9ab29b857c74692e2286a"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-dark.png",
+    "bytes": 37386,
+    "sha256": "de055b4475722fee2434e4e2409c8ba85143336fd0aa5d25c1a1e333187362e3"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-dark.svg",
+    "bytes": 1552,
+    "sha256": "2c2983b353c0378e471e0e9d39b951c5ae9a29183a7ed716f2c97a6f8a6365cc"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-day.png",
+    "bytes": 47590,
+    "sha256": "cdec02808fdf0bbf909cbd955a0aaf37e40c29d114800483c6e3adc188c4e394"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-day.svg",
+    "bytes": 1552,
+    "sha256": "af6698c7995366aed6d661044dc88d938e8cdee49759b70763ee8752e9fddd16"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-light.png",
+    "bytes": 47590,
+    "sha256": "cdec02808fdf0bbf909cbd955a0aaf37e40c29d114800483c6e3adc188c4e394"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-light.svg",
+    "bytes": 1552,
+    "sha256": "af6698c7995366aed6d661044dc88d938e8cdee49759b70763ee8752e9fddd16"
+  },
+  {
+    "path": "logos/paper-logo-horizontal-mono.svg",
+    "bytes": 1552,
+    "sha256": "1388060b3fc7d1058111a90c6c6807ad3df363f73a0ff6418457c574256016f8"
+  },
+  {
+    "path": "logos/paper-logo-stacked-dark.png",
+    "bytes": 62347,
+    "sha256": "772ebb383bcee558d6fc95c76d358339efc4b812c9826da491cf1fba301407ec"
+  },
+  {
+    "path": "logos/paper-logo-stacked-dark.svg",
+    "bytes": 1384,
+    "sha256": "45eec466b6cc2327d1a24ab655e8252b7758343c95edb72edc37cf4516b1dc4c"
+  },
+  {
+    "path": "logos/paper-logo-stacked-light.png",
+    "bytes": 77432,
+    "sha256": "84326b2170e4452b86d0d87d76a2f0016fe6f1c63460cd04d4a382ab2336ae7c"
+  },
+  {
+    "path": "logos/paper-logo-stacked-light.svg",
+    "bytes": 1384,
+    "sha256": "90025677a8131e36bdac399031695d33e33d4824ff53ccd5cd03d94ed8497a42"
+  },
+  {
+    "path": "logos/paper-mark-dark.svg",
+    "bytes": 832,
+    "sha256": "3405f2134128ee6bb05dcdb5dffe6e03270c36915fef364355e9ab73ec0321a4"
+  },
+  {
+    "path": "logos/paper-mark-light.svg",
+    "bytes": 832,
+    "sha256": "b5e31c07dcd18db76ea4100fac8577cc7a096f3119aa3e29580a34682824dc4f"
+  },
+  {
+    "path": "logos/paper-wordmark-dark.png",
+    "bytes": 56473,
+    "sha256": "addae70b2e80c2e1977fd31d52a47facb5a02268868866aeb6cdcbbff2db176d"
+  },
+  {
+    "path": "logos/paper-wordmark-dark.svg",
+    "bytes": 1177,
+    "sha256": "64417a40afa4d8bb9b237986b9cab84e324d2dad2fd3c8e44c20016d4d7f9250"
+  },
+  {
+    "path": "logos/paper-wordmark-light.png",
+    "bytes": 71210,
+    "sha256": "2bb8b50123d6c18f9b29565918cae000ad4e36d95427bdbdce256e309a4a46b0"
+  },
+  {
+    "path": "logos/paper-wordmark-light.svg",
+    "bytes": 1176,
+    "sha256": "3d83b0eb21e949261a9d8ded62a55dd9c67e2bac2bec7b182506db7d48b17993"
+  },
+  {
+    "path": "social/paper-social-preview.png",
+    "bytes": 29399,
+    "sha256": "04d6d6ad578c8dae257beb7058aebf6e6274d8e26fe119b5746d32ba7b301092"
+  },
+  {
+    "path": "themes/paper-theme.css",
+    "bytes": 1101,
+    "sha256": "d0aa18c1c2ef1a537257331967a4c359fad2624e051501ca08a99ae7af2580c1"
+  },
+  {
+    "path": "themes/theme-tokens.json",
+    "bytes": 641,
+    "sha256": "6345bd1e80963c71afb039c671740c45a2c8be7bc12401fa0adce857e05b901a"
+  }
+]

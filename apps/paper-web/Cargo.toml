@@ -1,0 +1,31 @@
+[package]
+name = "paper-web"
+description = "Paper: the editor as an embeddable browser component (create, execute, load, export, destroy)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+paper-engine = { workspace = true }
+paper-ui-egui = { workspace = true }
+# ponytail: the craft features the editor needs;
+# trim them when unused features are removed (ADR 0003).
+craft = { workspace = true, features = ["web-api", "web-host", "platform-browser", "platform-appearance", "platform-clipboard", "automation", "print", "settings", "ui", "window"] }
+egui = { workspace = true }
+log = { workspace = true }
+serde_json = { workspace = true }
+base64 = { workspace = true }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+eframe = { workspace = true, features = ["default_fonts", "wgpu", "accesskit"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["HtmlCanvasElement"] }

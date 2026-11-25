@@ -1,0 +1,94 @@
+{
+  "schema": "craft-design-theme",
+  "schema_version": 1,
+  "id": "paper.paper",
+  "name": "Paper",
+  "version": 1,
+  "variants": "both",
+  "contrast_intent": "standard",
+  "seeds": {
+    "accent": "#ffffff",
+    "neutral": "#202328",
+    "status": {
+      "bad": "#ff8a80",
+      "good": "#7fd38a",
+      "info": "#b7bbc1",
+      "warn": "#f0c26e"
+    }
+  },
+  "shape": {
+    "button_radius": 8.0,
+    "radius_offset": {
+      "control": 2.0,
+      "surface": 4.0,
+      "window": 4.0
+    },
+    "wells": "round"
+  },
+  "light": {
+    "seeds": {
+      "accent": "#17191c",
+      "neutral": "#ffffff",
+      "status": {
+        "bad": "#b42318",
+        "good": "#2e7d32",
+        "info": "#17191c",
+        "warn": "#8c4800"
+      }
+    },
+    "accent.solid": "#17191c",
+    "accent.strong": "#000000",
+    "accent.text": "#17191c",
+    "accent.soft": "#17191c14",
+    "accent.border": "#17191c66",
+    "caption.close_hover": "#c42b1c",
+    "caption.close_text": "#ffffff",
+    "line.border": "#e5e5e2",
+    "line.control_edge": "#d9d8d3",
+    "line.divider": "#e9e8e4",
+    "line.focus": "#17191c",
+    "state.hover": "#f0efeb",
+    "state.pressed": "#e5e5e2",
+    "state.selected": "#ebeae6",
+    "state.selected_hover": "#e5e5e2",
+    "surface.background": "#f7f6f2",
+    "surface.canvas": "#f0efeb",
+    "surface.chrome": "#ffffff",
+    "surface.panel": "#ffffff",
+    "surface.raised": "#ffffff",
+    "surface.sunken": "#ffffff",
+    "surface.shadow": "#17191c1f",
+    "text.normal": "#17191c",
+    "text.muted": "#3f4248",
+    "text.faint": "#666a70",
+    "text.on_accent": "#ffffff"
+  },
+  "dark": {
+    "accent.solid": "#ffffff",
+    "accent.strong": "#e5e5e2",
+    "accent.text": "#ffffff",
+    "accent.soft": "#ffffff1f",
+    "accent.border": "#ffffff66",
+    "caption.close_hover": "#c42b1c",
+    "caption.close_text": "#ffffff",
+    "line.border": "#373b42",
+    "line.control_edge": "#454a52",
+    "line.divider": "#2b2e34",
+    "line.focus": "#ffffff",
+    "state.hover": "#2b2e34",
+    "state.pressed": "#373b42",
+    "state.selected": "#30343a",
+    "state.selected_hover": "#373b42",
+    "surface.background": "#15171a",
+    "surface.canvas": "#101113",
+    "surface.chrome": "#202328",
+    "surface.panel": "#202328",
+    "surface.raised": "#26292f",
+    "surface.sunken": "#15171a",
+    "surface.shadow": "#0000006e",
+    "text.normal": "#ffffff",
+    "text.muted": "#dcdee1",
+    "text.faint": "#b7bbc1",
+    "text.on_accent": "#15171a"
+  }
+}

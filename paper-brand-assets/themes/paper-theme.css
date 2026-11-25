@@ -1,0 +1,31 @@
+/* Paper by Brekquater — brand tokens */
+:root {
+  color-scheme: light dark;
+  --paper-ink: #17191C;
+  --paper-muted: #666A70;
+  --paper-bg: #F7F6F2;
+  --paper-surface: #FFFFFF;
+  --paper-border: #D9D8D3;
+  --paper-dark-bg: #15171A;
+}
+:root[data-theme="light"], [data-theme="light"] {
+  color-scheme: light;
+  --paper-bg: #F7F6F2; --paper-surface: #FFFFFF;
+  --paper-text: #17191C; --paper-text-muted: #666A70; --paper-border-current: #D9D8D3;
+}
+:root[data-theme="day"], [data-theme="day"] {
+  color-scheme: light;
+  --paper-bg: #FFFFFF; --paper-surface: #FFFFFF;
+  --paper-text: #17191C; --paper-text-muted: #666A70; --paper-border-current: #E5E5E2;
+}
+:root[data-theme="dark"], [data-theme="dark"] {
+  color-scheme: dark;
+  --paper-bg: #15171A; --paper-surface: #202328;
+  --paper-text: #FFFFFF; --paper-text-muted: #B7BBC1; --paper-border-current: #373B42;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"], [data-theme="system"] {
+    --paper-bg: #15171A; --paper-surface: #202328;
+    --paper-text: #FFFFFF; --paper-text-muted: #B7BBC1; --paper-border-current: #373B42;
+  }
+}

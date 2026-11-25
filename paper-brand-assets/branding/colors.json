@@ -1,0 +1,41 @@
+{
+  "brand": {
+    "ink": "#17191C",
+    "muted": "#666A70",
+    "paper": "#F7F6F2",
+    "white": "#FFFFFF",
+    "border": "#D9D8D3",
+    "darkSurface": "#15171A"
+  },
+  "themes": {
+    "light": {
+      "background": "#F7F6F2",
+      "surface": "#FFFFFF",
+      "text": "#17191C",
+      "textMuted": "#666A70",
+      "border": "#D9D8D3",
+      "icon": "#17191C"
+    },
+    "day": {
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text": "#17191C",
+      "textMuted": "#666A70",
+      "border": "#E5E5E2",
+      "icon": "#17191C"
+    },
+    "dark": {
+      "background": "#15171A",
+      "surface": "#202328",
+      "text": "#FFFFFF",
+      "textMuted": "#B7BBC1",
+      "border": "#373B42",
+      "icon": "#FFFFFF"
+    },
+    "system": {
+      "light": "light",
+      "dark": "dark",
+      "note": "Follow prefers-color-scheme in the host application."
+    }
+  }
+}

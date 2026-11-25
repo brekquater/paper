@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paper</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 16px; background: #f7f6f2; color: #17191c; }
+    .editors { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .editor { display: flex; flex-direction: column; gap: 8px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 6px; }
+    button { font: inherit; padding: 4px 10px; }
+    .surface { height: 720px; border: 1px solid #d9d8d3; background: #e6e6e6; }
+    .surface canvas { width: 100%; height: 100%; display: block; }
+    .log { font: 12px ui-monospace, monospace; white-space: pre-wrap; min-height: 1.5em; }
+    .events { color: #444; min-height: 5em; }
+    /* The host-app stand-ins (buttons, logs, labels) show only on the test page, `?test`. */
+    body:not(.testing) :is(.intro, .editor h2, .toolbar, .log) { display: none; }
+  </style>
+</head>
+<body>
+  <div class="intro">
+  <h1>Paper component test page</h1>
+  <p>Two editors mounted in two host-owned elements. Not a product page: a test harness for M1.
+     Editing is done with each editor's own ribbon; the buttons above each editor stand in for the
+     host app (save, open, close). <a href="?test&ui=pages">Pages only</a> · <a href="?test">with ribbon</a> · <a href="?">clean page</a> · <a href="./">product page</a>.</p>
+  </div>
+  <div class="editors">
+    <section class="editor" id="a"></section>
+    <section class="editor" id="b"></section>
+  </div>
+  <script type="module">
+    import init, { PaperEditor } from "./pkg/paper_web.js";
+
+    await init();
+    const params = new URLSearchParams(location.search);
+    const ui = params.get("ui") ?? undefined; // "ribbon" (default) or "pages"
+    document.body.classList.toggle("testing", params.has("test"));
+
+    function mountPanel(root, label) {
+      root.innerHTML = `
+        <h2>${label}</h2>
+        <div class="toolbar">
+          <button data-act="export">Export DOCX</button>
+          <label><input type="file" accept=".docx,.html,.rtf,.odt,.txt" hidden data-act="load"><button data-act="pick">Load file…</button></label>
+          <button data-act="destroy">Destroy</button>
+          <button data-act="mount" disabled>Mount again</button>
+        </div>
+        <div class="surface"></div>
+        <div class="log"></div>
+        <div class="log events"></div>`;
+      const surface = root.querySelector(".surface");
+      const log = (m) => { root.querySelector(".log").textContent = m; };
+      const events = {};
+      const showEvent = (name, detail) => {
+        events[name] = `${new Date().toLocaleTimeString()} ${JSON.stringify(detail)}`;
+        root.querySelector(".events").textContent = Object.entries(events).map(([k, v]) => `${k}: ${v}`).join("\n");
+      };
+      const button = (act) => root.querySelector(`[data-act="${act}"]`);
+      let editor = null;
+
+      function download(name, bytes) {
+        const url = URL.createObjectURL(new Blob([bytes]));
+        Object.assign(document.createElement("a"), { href: url, download: name }).click();
+        URL.revokeObjectURL(url);
+      }
+
+      async function mount() {
+        const canvas = document.createElement("canvas");
+        surface.replaceChildren(canvas);
+        const t0 = performance.now();
+        editor = await PaperEditor.create(canvas, ui);
+        (window.__editors ??= {})[label] = editor; // for automated checks
+        log(`mounted in ${Math.round(performance.now() - t0)} ms`);
+        // The host names the user; comments and tracked changes are signed with it.
+        editor.setAuthor(`${label} user`);
+        for (const name of ["change", "selectionchange", "dirty"]) editor.on(name, (d) => showEvent(name, d));
+        // Saves from inside the editor (Ctrl+S, File › Save, exports) come here instead of a download.
+        editor.on("save", ({ name, saveAs, bytes }) => {
+          showEvent("save", { name, saveAs, bytes: bytes.length });
+          window.__lastSave = { label, name, bytes }; // for automated checks
+          download(name, bytes);
+        });
+        button("mount").disabled = true;
+        button("destroy").disabled = false;
+      }
+
+      const run = (act, f) => button(act).addEventListener("click", () => {
+        try { f(); } catch (e) { log(`${act}: ${e.message ?? e}`); }
+      });
+      run("export", () => {
+        const bytes = editor.export("docx");
+        download(`${label}.docx`, bytes);
+        log(`exported ${bytes.length} bytes`);
+      });
+      run("pick", () => button("load").click());
+      button("load").addEventListener("change", async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        try { log(editor.load(file.name, new Uint8Array(await file.arrayBuffer()))); }
+        catch (err) { log(`load: ${err.message ?? err}`); }
+        e.target.value = "";
+      });
+      run("destroy", () => {
+        editor.free(); // runs destroy(): listeners removed, frame loop stopped
+        editor = null;
+        surface.replaceChildren();
+        button("destroy").disabled = true;
+        button("mount").disabled = false;
+        log("destroyed");
+      });
+      button("mount").addEventListener("click", () => mount().catch((e) => log(`mount: ${e.message ?? e}`)));
+      return mount();
+    }
+
+    await Promise.all([mountPanel(document.getElementById("a"), "Editor A"), mountPanel(document.getElementById("b"), "Editor B")]);
+  </script>
+</body>
+</html>
