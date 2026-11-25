@@ -71,7 +71,7 @@ pub fn export_formats(app: &mut WordApp, ui: &mut Ui) {
     #[cfg(all(unix, not(target_os = "macos"), not(target_arch = "wasm32")))]
     {
         if clicked(&Button::new(tl!("Browse in Paper…")).id_salt("browse").sizing(Sizing::FillWidth).align(HAlign::Start).show(ui)) {
-            let _ = app.run("ui.fileBrowser", json!({"purpose": "export"}));
+            let _ = app.run("ui.fileBrowser", serde_json::json!({"purpose": "export"}));
         }
     }
 }
