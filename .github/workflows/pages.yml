@@ -1,0 +1,63 @@
+name: Pages
+
+# Builds the browser component (web-release profile) and publishes apps/paper-web/www, with the
+# brand kit under brand/, to GitHub Pages. Pages must be set to "GitHub Actions" in the repository
+# settings.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CRAFT_I18N_DIR: ${{ github.workspace }}/../craft-i18n
+      CRAFT_FONTS_DIR: ${{ github.workspace }}/../craft-fonts
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build inputs (translations, language data, interface fonts)
+        run: |
+          git clone --filter=blob:none https://github.com/storytold/craft-i18n "$CRAFT_I18N_DIR"
+          git -C "$CRAFT_I18N_DIR" checkout "$(cat craft-i18n.rev)"
+          git clone --filter=blob:none https://github.com/storytold/craft-fonts "$CRAFT_FONTS_DIR"
+          git -C "$CRAFT_FONTS_DIR" checkout b076417b5880bd4154bd22f00695b1d28c6bea83
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup target add wasm32-unknown-unknown
+          cargo install wasm-bindgen-cli --version 0.2.129 --locked
+      - name: Build the wasm
+        run: cargo build --profile web-release --target wasm32-unknown-unknown -p paper-web
+      - name: Assemble the site
+        run: |
+          wasm-bindgen --target web --weak-refs --remove-name-section --remove-producers-section \
+            --out-dir apps/paper-web/www/pkg target/wasm32-unknown-unknown/web-release/paper_web.wasm
+          mkdir -p site
+          cp -r apps/paper-web/www/. site/
+          cp -r paper-brand-assets site/brand
+          touch site/.nojekyll
+          ls -la site site/pkg
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

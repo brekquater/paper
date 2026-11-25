@@ -1,0 +1,16 @@
+{
+  "primaryFontStack": "Inter, Helvetica Neue, Arial, sans-serif",
+  "wordmark": {
+    "weight": 600,
+    "tracking": -5
+  },
+  "descriptor": {
+    "weight": 400,
+    "tracking": 0
+  },
+  "byline": {
+    "weight": 400,
+    "tracking": 5.2
+  },
+  "note": "The SVG wordmarks use live text with system fallbacks. For print production, convert text to outlines in a vector editor after approving the font rendering."
+}

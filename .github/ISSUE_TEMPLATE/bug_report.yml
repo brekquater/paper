@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a reproducible defect in Paper or its inherited engine integration.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include confidential documents, personal data, API keys or private customer content. Use a synthetic or redacted fixture."
+  - type: input
+    id: version
+    attributes:
+      label: Paper commit/package version
+      placeholder: commit SHA or package version
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, OS and runtime versions
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the smallest reproducible sample.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and errors
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      options:
+        - Rust engine
+        - WASM/browser integration
+        - TypeScript core
+        - React adapter
+        - DOCX/HTML import or export
+        - Clipboard
+        - Comments/review/compare
+        - Documentation
+        - Unknown
+    validations:
+      required: true

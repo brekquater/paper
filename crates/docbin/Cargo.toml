@@ -1,0 +1,20 @@
+[package]
+name = "paper-docbin"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Paper reader for the Word 97-2003 binary file format (.doc, [MS-DOC])"
+
+[lints]
+workspace = true
+
+[dependencies]
+craft-doc-binary = { workspace = true }
+craft-wordmodel = { workspace = true }
+paper-doc = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+paper-doc = { workspace = true, features = ["test-support"] }
+cfb = { workspace = true }

@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a capability for Paper.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to achieve? What is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User story
+      placeholder: As a developer, I want...
+    validations:
+      required: true
+  - type: textarea
+    id: current_engine
+    attributes:
+      label: Existing engine support (if known)
+      description: Link relevant code, commands, docs or tests if you have them.
+    validations:
+      required: false
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and trade-offs
+    validations:
+      required: false

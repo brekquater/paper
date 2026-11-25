@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="292" viewBox="0 0 512 292" role="img" aria-labelledby="title desc">
+  <title id="title">Paper — Document Editing Engine</title><desc id="desc">A document page with text lines and an editing cursor, alongside the Paper wordmark.</desc>
+  <g transform="translate(181 5) scale(1.1)" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M28 15 H77 L103 41 V49" stroke-width="8.5"/>
+      <path d="M28 15 V98 Q28 112 42 112 H101" stroke-width="8.5"/>
+      <path d="M77 15 V34 Q77 41 84 41 H103" stroke-width="8.5"/>
+      <path d="M77 15 L103 41 H84 Q77 41 77 34 Z" fill="#777B80" stroke="none"/>
+      <path d="M43 59 H81 M43 74 H81 M43 89 H81" stroke-width="5.5"/>
+      <path d="M95 69 V99 M89 69 H101 M89 99 H101" stroke-width="4.5"/>
+    </g><text x="256" y="187" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="600" letter-spacing="-3">Paper</text><text x="256" y="225" text-anchor="middle" fill="#FFFFFF" opacity="0.86" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="18" letter-spacing="4">by Brekquater</text><text x="256" y="268" text-anchor="middle" fill="#FFFFFF" opacity="0.75" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="17">Document Editing Engine</text>
+</svg>
