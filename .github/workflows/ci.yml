@@ -24,7 +24,7 @@ jobs:
       CRAFT_I18N_DIR: ${{ github.workspace }}/../craft-i18n
       CRAFT_FONTS_DIR: ${{ github.workspace }}/../craft-fonts
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build inputs (translations, language data, interface fonts)
         run: |
           git clone --filter=blob:none https://github.com/storytold/craft-i18n "$CRAFT_I18N_DIR"
