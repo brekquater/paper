@@ -25,7 +25,7 @@ jobs:
       CRAFT_I18N_DIR: ${{ github.workspace }}/../craft-i18n
       CRAFT_FONTS_DIR: ${{ github.workspace }}/../craft-fonts
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build inputs (translations, language data, interface fonts)
         run: |
           git clone --filter=blob:none https://github.com/storytold/craft-i18n "$CRAFT_I18N_DIR"
@@ -48,7 +48,7 @@ jobs:
           cp -r paper-brand-assets site/brand
           touch site/.nojekyll
           ls -la site site/pkg
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
@@ -60,4 +60,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
